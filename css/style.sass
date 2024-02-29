@@ -38,6 +38,24 @@ body
     background: url("../img/pattern_hexagon.png") $color5
     animation: backgroundMove 60s infinite linear;
 
+nav
+    >ul        
+        >li
+            text-align: right
+            transition-duration: 0.25s
+        >li:hover
+            text-shadow: 0 0 10px $color5;
+        padding: 1%
+        display: none
+        justify-content: flex-end
+        font-size: 14px
+        font-weight: bolder
+        font-style: italic
+        color: $color6
+        gap: 19px
+    background-color: $color3Alt
+    
+
 @keyframes backgroundMove
   0%
     background-position: 0 0
@@ -45,33 +63,38 @@ body
   100%
     background-position: -350px -350px;
 
-main>section
-    margin: 5%
-    display: flex
-    flex-direction: column
-    align-items: center
-    gap: 20px
+main
+    >section
+        margin: 5%
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 20px
 
 .tarjeta
+    >div
+        >h1
+            text-shadow: 0 0 10px $color5;
+        display: flex
+        flex-direction: column
+        align-items: center
+    >h3
+        text-shadow: 0 0 10px $color5;
+        text-align: center
+    >h1
+        text-shadow: 0 0 10px $color5;
     @include tarjetaBase(5%, 5%, 10px , $color6 , $color1Alt)
     display: flex
     flex-direction: column
     align-items: center
 
-.tarjeta>h3, div>h4
-    text-shadow: 0 0 10px $color5;
-    text-align: center
+div
+    >h4
+        text-shadow: 0 0 10px $color5;
+        text-align: center
 
 .gap1
     gap: 10px
-
-.tarjeta>div
-    display: flex
-    flex-direction: column
-    align-items: center
-
-.tarjeta>h1, .tarjeta>div>h1
-    text-shadow: 0 0 10px $color5;
 
 .foto
     background: url(../img/foto.png) -3px 0px
@@ -86,13 +109,12 @@ main>section
     background-size: 147%
 
 .redes
+    >div
+        display: flex;
+        align-items: center
+        gap: 10px;
     margin: 2% 0%
     font-size: xx-large
-
-.redes>div
-    display: flex;
-    align-items: center
-    gap: 10px;
 
 a
     color: $color6
@@ -106,83 +128,90 @@ a:hover
     font-size: medium
 
 .sobreMi
+    >p
+        text-align: justify
     @include tarjetaBase(0%, 5%, 10px, $color6 , $color3Alt)
 
 .miniTar3
     @include tarjetaBase(2%, 5%, 10px, $color6 , $color3Alt)
 
-.sobreMi>p
-    text-align: justify
 
 .miniTar
+    .title
+        display: flex;
+        align-items: center
+        justify-content: space-between
     @include tarjetaBase(0%, 5%, 10px, $color6 , $color5Alt)
 
 .miniTar2
+    .title
+        display: flex;
+        align-items: center
+        justify-content: space-between
     @include tarjetaBase(2%, 5%, 10px, $color6 , $color5Alt)
 
-.miniTar .title, .miniTar2 .title
-    display: flex;
-    align-items: center
-    justify-content: space-between
 
-.miniTar img, .miniTar2 img
-    max-width: 100%
-    border-radius: 10px
+.miniTar, .miniTar2 
+    img
+        max-width: 100%
+        border-radius: 10px
+    >hr
+        width: 100%
 
-.miniTar .title p
-    text-align: center
+.miniTar 
+    >p
+        text-align: center
+    .title 
+        p
+            text-align: center
 
-.miniTar2 .title p
-    text-align: justify
+.miniTar2 
+    >p
+        text-align: justify
+    .title 
+        p
+        text-align: justify
 
-.miniTar .lugar .title2, .miniTar2 .lugar .title2
-    text-align: center
-    font-size: larger
-    font-weight: bold
-
-.miniTar>p
-    text-align: center
-
-.miniTar2>p
-    text-align: justify
+.miniTar, .miniTar2 
+    .lugar 
+        .title2
+            text-align: center
+            font-size: larger
+            font-weight: bold    
 
 .tecs
+    >li
+        >i
+            font-size: xx-large
+        display: flex
+        flex-direction: column
+        align-items: center
     display: flex
     flex-wrap: wrap
     gap: 20px
     justify-content: center
 
-.tecs>li
-    display: flex
-    flex-direction: column
-    align-items: center
-
-.tecs>li>i
-    font-size: xx-large
-
-.idiomList>li
-    display: flex
-    justify-content: space-between
-    align-items: center
-    gap: 10px
+.idiomList
+    >li
+        display: flex
+        justify-content: space-between
+        align-items: center
+        gap: 10px
 
 .compTIC
+    >li
+        >div
+            display: flex
+            align-items: center
+            gap: 10px
+        >p
+            text-align: center;
+        display: flex
+        justify-content: space-between;
+        gap: 10px
     background-color: $color5Alt;
     padding: 2% 5%;
     border-radius: 10px;
-
-.compTIC>li
-    display: flex
-    justify-content: space-between;
-    gap: 10px
-
-.compTIC>li>div
-    display: flex
-    align-items: center
-    gap: 10px
-
-.compTIC>li>p
-    text-align: center;
 
 .capacidades
     display: flex
@@ -204,29 +233,35 @@ footer
 
 @media screen and (min-width: 700px) 
     .tarjeta
+        >h3
+            font-size: x-large
         flex-wrap: wrap
         justify-content: space-around
         flex-direction: row
 
-    .tarjeta>h3, .miniTar2>strong, .bigLetter
+    .bigLetter
         font-size: x-large
+
+    .miniTar2
+        >strong
+            font-size: x-large
     
     .redes
         align-items: stretch !important
         
-    .sobreMi, .tecs>li>p
+    .sobreMi
         font-size: larger
 
+    .tecs
+        >li
+            >i
+                font-size: xxx-large
+            >p
+                font-size: larger
     .miniTar
         align-items: stretch !important
         max-width: 100%
         flex: 1 0 90%
-
-    .miniTar>hr, .miniTar2>hr
-        width: 100%
-
-    .tecs>li>i
-        font-size: xxx-large
     
     .miniTar2
         gap: 10px
@@ -243,6 +278,12 @@ footer
         flex: 1 0 45%
         
 @media screen and (min-width: 1024px)
+    nav
+        >.ham
+            display: none
+        >ul
+            display: flex
+
     .foto
         padding: 130px
         background-position: -5px 0px
@@ -253,14 +294,20 @@ footer
     .text, .bigLetter2
         font-size: x-large
 
-    .bigLetter3, .tarjeta>h3
+    .tarjeta
+        >h3
+            font-size: xx-large
+
+    .bigLetter3
         font-size: xx-large
 
     .redes
         font-size: xxx-large
 
-    .tecs>li>i
-        font-size: 220%;
+    .tecs
+        >li
+            >i
+                font-size: 220%;
 
     .compTIC
         flex: 1 0 80%

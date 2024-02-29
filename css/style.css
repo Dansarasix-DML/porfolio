@@ -19,6 +19,30 @@ body {
   animation: backgroundMove 60s infinite linear;
 }
 
+nav {
+  background-color: #d52784af;
+}
+
+nav > ul {
+  padding: 1%;
+  display: none;
+  justify-content: flex-end;
+  font-size: 14px;
+  font-weight: bolder;
+  font-style: italic;
+  color: white;
+  gap: 19px;
+}
+
+nav > ul > li {
+  text-align: right;
+  transition-duration: 0.25s;
+}
+
+nav > ul > li:hover {
+  text-shadow: 0 0 10px #4b1b95;
+}
+
 @keyframes backgroundMove {
   0% {
     background-position: 0 0;
@@ -46,23 +70,32 @@ main > section {
   align-items: center;
 }
 
-.tarjeta > h3, div > h4 {
-  text-shadow: 0 0 10px #4b1b95;
-  text-align: center;
-}
-
-.gap1 {
-  gap: 10px;
-}
-
 .tarjeta > div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.tarjeta > h1, .tarjeta > div > h1 {
+.tarjeta > div > h1 {
   text-shadow: 0 0 10px #4b1b95;
+}
+
+.tarjeta > h3 {
+  text-shadow: 0 0 10px #4b1b95;
+  text-align: center;
+}
+
+.tarjeta > h1 {
+  text-shadow: 0 0 10px #4b1b95;
+}
+
+div > h4 {
+  text-shadow: 0 0 10px #4b1b95;
+  text-align: center;
+}
+
+.gap1 {
+  gap: 10px;
 }
 
 .foto {
@@ -111,15 +144,15 @@ a:hover {
   background-color: #d52784af;
 }
 
+.sobreMi > p {
+  text-align: justify;
+}
+
 .miniTar3 {
   padding: 2% 5%;
   border-radius: 10px;
   color: white;
   background-color: #d52784af;
-}
-
-.sobreMi > p {
-  text-align: justify;
 }
 
 .miniTar {
@@ -129,6 +162,12 @@ a:hover {
   background-color: rgba(76, 27, 149, 0.87);
 }
 
+.miniTar .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .miniTar2 {
   padding: 2% 5%;
   border-radius: 10px;
@@ -136,7 +175,7 @@ a:hover {
   background-color: rgba(76, 27, 149, 0.87);
 }
 
-.miniTar .title, .miniTar2 .title {
+.miniTar2 .title {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -147,11 +186,23 @@ a:hover {
   border-radius: 10px;
 }
 
+.miniTar > hr, .miniTar2 > hr {
+  width: 100%;
+}
+
+.miniTar > p {
+  text-align: center;
+}
+
 .miniTar .title p {
   text-align: center;
 }
 
-.miniTar2 .title p {
+.miniTar2 > p {
+  text-align: justify;
+}
+
+.miniTar2 .title {
   text-align: justify;
 }
 
@@ -159,14 +210,6 @@ a:hover {
   text-align: center;
   font-size: larger;
   font-weight: bold;
-}
-
-.miniTar > p {
-  text-align: center;
-}
-
-.miniTar2 > p {
-  text-align: justify;
 }
 
 .tecs {
@@ -242,25 +285,31 @@ footer {
     justify-content: space-around;
     flex-direction: row;
   }
-  .tarjeta > h3, .miniTar2 > strong, .bigLetter {
+  .tarjeta > h3 {
+    font-size: x-large;
+  }
+  .bigLetter {
+    font-size: x-large;
+  }
+  .miniTar2 > strong {
     font-size: x-large;
   }
   .redes {
     align-items: stretch !important;
   }
-  .sobreMi, .tecs > li > p {
+  .sobreMi {
+    font-size: larger;
+  }
+  .tecs > li > i {
+    font-size: xxx-large;
+  }
+  .tecs > li > p {
     font-size: larger;
   }
   .miniTar {
     align-items: stretch !important;
     max-width: 100%;
     flex: 1 0 90%;
-  }
-  .miniTar > hr, .miniTar2 > hr {
-    width: 100%;
-  }
-  .tecs > li > i {
-    font-size: xxx-large;
   }
   .miniTar2 {
     gap: 10px;
@@ -279,6 +328,12 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
+  nav > .ham {
+    display: none;
+  }
+  nav > ul {
+    display: flex;
+  }
   .foto {
     padding: 130px;
     background-position: -5px 0px;
@@ -289,7 +344,10 @@ footer {
   .text, .bigLetter2 {
     font-size: x-large;
   }
-  .bigLetter3, .tarjeta > h3 {
+  .tarjeta > h3 {
+    font-size: xx-large;
+  }
+  .bigLetter3 {
     font-size: xx-large;
   }
   .redes {

@@ -15,16 +15,29 @@
     <title>Daniel Marín López</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a aria-label="Enlace a la parte sobre mí" href="#sbremi">Sobre Mí</a></li>
+                <li><a aria-label="Enlace a la parte de formación" href="#form">Formación y Educación</a></li>
+                <li><a aria-label="Enlace a la parte de tecnologías usadas" href="#tecs">Tecnologias que he usado</a></li>
+                <li><a aria-label="Enlace a la parte de proyectos" href="#proyects">Proyectos que he realizado</a></li>
+                <li><a aria-label="Enlace a la parte de idiomas" href="#idioms">Competencias de idiomas</a></li>
+                <li><a aria-label="Enlace a la parte de competencias digitales" href="#digit">Competencias digitales (Europass)</a></li>
+                <li><a aria-label="Enlace a la parte de capacidades digitales" href="#caps">Capacidades Digitales</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="content">
         <main>
             <section>
-                <article class="tarjeta">
+                <article id="sobremi" class="tarjeta">
                     <div>
                         <div class="foto"></div>
                         <h1>Daniel Marín López</h1>
                     </div>
                     <div class="redes">
-                        <div><i class="bi bi-github"></i><a href="https://github.com/Dansarasix-DML" target="_blank" rel="github"><p class="text">Github</p></a></div>
+                        <div><i class="bi bi-github"></i><a aria-label="Enlace hacia la cuenta de GitHub" href="https://github.com/Dansarasix-DML" target="_blank" rel="github"><p class="text">Github</p></a></div>
                         <div><i class="bi bi-envelope-at-fill"></i><p class="text"> danielmarinlopez898@gmail.com</p></div>
                         <div><i class="bi bi-telephone"></i><p class="text">+34 618 36 79 35</p></div>
                     </div>
@@ -37,7 +50,7 @@
                         </p>
                     </div>
                 </article>
-                <article class="tarjeta gap1">
+                <article id="form" class="tarjeta gap1">
                     <h3>Formación y Educación</h3>
                     <div class="miniTar">
                         <div class="title">
@@ -48,7 +61,7 @@
                         <div class="lugar">
                             <p class="title2">I.E.S. Gran Capitán</p>
                             <p><strong>Dirección:</strong> Calle Arcos de la Frontera, 14014, Córdoba, España</p>
-                            <p><strong>Web: </strong> <a href="https://www.iesgrancapitan.org/" target="_blank" rel="noopener noreferrer">www.iesgrancapitan.org</a></p>
+                            <p><strong>Web: </strong> <a aria-label="Enlace hacia la página del I.E.S. Gran Capitán" href="https://www.iesgrancapitan.org/" target="_blank" rel="noopener noreferrer">www.iesgrancapitan.org</a></p>
                         </div>
                     </div>
                     <div class="miniTar">
@@ -61,11 +74,11 @@
                         <div class="lugar">
                             <p class="title2">Universidad Politécnica Superior de Córdoba</p>
                             <p><strong>Dirección:</strong> Campus Rabanales, 14014, Córdoba, España</p>
-                            <p><strong>Web: </strong> <a href="https://www.uco.es/eps/es/" target="_blank" rel="noopener noreferrer">www.uco.es</a></p>
+                            <p><strong>Web: </strong> <a aria-label="Enlace hacia la página de la UCO" href="https://www.uco.es/eps/es/" target="_blank" rel="noopener noreferrer">www.uco.es</a></p>
                         </div>
                     </div>
                 </article>
-                <article class="tarjeta bigLetter3">
+                <article id="tecs" class="tarjeta bigLetter3">
                     <h3>Tecnologias que he usado</h3>
                     <ul class="tecs">
                         <li>
@@ -134,10 +147,10 @@
                         </li>
                     </ul>
                 </article>
-                <article class="tarjeta gap1">
+                <article id="proyects" class="tarjeta gap1">
                     <h3>Proyectos que he realizado</h3>
                     <div class="miniTar2">
-                        <strong><a href="https://dansarasix-dml.github.io/mastermind_js/" target="_blank" rel="noopener noreferrer">Mastermind en JavaScript</a></strong>
+                        <strong><a aria-label="Enlace hacia el mastermind" href="https://dansarasix-dml.github.io/mastermind_js/" target="_blank" rel="noopener noreferrer">Mastermind en JavaScript</a></strong>
                         <picture>
                             <source media="(max-width: 700px)" srcset="./img/mastermind_x_small.png">
                             <source media="(min-width: 700px) and (max-width: 1024px)" srcset="./img/mastermind_small.png">
@@ -151,7 +164,7 @@
                         </p>
                     </div>
                     <div class="miniTar2">
-                        <strong><a href="https://dansarasix-dml.github.io/wordle_jqery/" target="_blank" rel="noopener noreferrer">Wordle en jQuery</a></strong>
+                        <strong><a aria-label="Enlace hacia el wordle" href="https://dansarasix-dml.github.io/wordle_jqery/" target="_blank" rel="noopener noreferrer">Wordle en jQuery</a></strong>
                         <picture>
                             <source media="(max-width: 700px)" srcset="./img/wordle_x_small.png">
                             <source media="(min-width: 700px) and (max-width: 1024px)" srcset="./img/wordle_small.png">
@@ -165,7 +178,7 @@
                         </p>
                     </div>
                     <div class="miniTar2">
-                        <strong><a href="https://github.com/Dansarasix-DML/API-react-contactos" target="_blank" rel="noopener noreferrer">API de contactos con React y PHP</a></strong>
+                        <strong><a aria-label="Enlace hacia la API de contactos" href="https://github.com/Dansarasix-DML/API-react-contactos" target="_blank" rel="noopener noreferrer">API de contactos con React y PHP</a></strong>
                         <picture>
                             <source media="(max-width: 700px)" srcset="./img/api-react_x_small.png">
                             <source media="(min-width: 700px) and (max-width: 1024px)" srcset="./img/api-react_small.png">
@@ -180,7 +193,7 @@
                     </p>
                     </div>
                     <div class="miniTar2">
-                        <strong><a href="https://dansarasix-dml.github.io/web_casas_rurales/" target="_blank" rel="noopener noreferrer">Web de Casas Rurales</a></strong>
+                        <strong><a aria-label="Enlace hacia el buscador de casas rurales" href="https://dansarasix-dml.github.io/web_casas_rurales/" target="_blank" rel="noopener noreferrer">Web de Casas Rurales</a></strong>
                         <picture>
                             <source media="(max-width: 700px)" srcset="./img/casas-rurales_x_small.png">
                             <source media="(min-width: 700px) and (max-width: 1024px)" srcset="./img/casas-rurales_small.png">
@@ -194,7 +207,7 @@
                         </p>
                     </div>
                 </article>
-                <article class="tarjeta">
+                <article id="idioms" class="tarjeta">
                     <h3>Competencias de idiomas</h3>
                     <div class="miniTar bigLetter">
                         <p>Inglés</p>
@@ -207,7 +220,7 @@
                         </ul>
                     </div>
                 </article>
-                <article class="tarjeta">
+                <article id="digit" class="tarjeta">
                     <h3>Competencias digitales (Europass)</h3>
                     <ul class="compTIC bigLetter">
                         <li>
@@ -246,9 +259,9 @@
                             <p>Nivel 3/6</p>
                         </li>
                     </ul>
-                    <p class="bigLetter"><strong>Web: </strong><a href="https://joint-research-centre.ec.europa.eu/digcomp_en" target="_blank" rel="noopener noreferrer">Competencias digitales (Europass)</a></p>
+                    <p class="bigLetter"><strong>Web: </strong><a aria-label="Enlace hacia la página de Europass sobre la Competencias Digitales" href="https://joint-research-centre.ec.europa.eu/digcomp_en" target="_blank" rel="noopener noreferrer">Competencias digitales (Europass)</a></p>
                 </article>
-                <article class="tarjeta">
+                <article id="caps" class="tarjeta">
                     <h3>Capacidades Digitales</h3>
                     <div class="skillsBox bigLetter">
                         <div class="hardSkills">
